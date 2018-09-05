@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5,6 +6,9 @@ html {
 }
 body {
   margin: 0;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  line-height: 1.2;
 }
 article,
 aside,
@@ -38,11 +42,15 @@ template {
   display: none;
 }
 a {
+  color: #666666;
+  font-weight: 300;
+  text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
+  color: #333333;
   outline-width: 0;
 }
 abbr[title] {
@@ -622,3 +630,42 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.Hero {
+  height: 920px;
+  background: url('https://cl.ly/3k1F152x261C/download/wallpaper3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.Hero h1 {
+  margin: 0;
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.Hero p {
+  font-size: 30px;
+  line-height: 1.5;
+  color: rgba(255,255,255, 0.8);
+}
+
+.Hero a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.7);
+  padding: 9px 20px;
+  border: 1px solid rgba(255,255,255, 0.25);
+  border-radius: 20px;
+}
+
+.HeroGroup {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 150px 50px;
+  text-align: center;
+}
+
