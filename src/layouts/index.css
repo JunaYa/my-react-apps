@@ -24,22 +24,19 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
-hgroup {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-
 .Hero {
+  position: relative;
   height: 920px;
   background: url('../images/wallpaper3.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.HeroGroup {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 150px 50px;
+  text-align: center;
 }
 
 .Hero h1 {
@@ -76,12 +73,20 @@ hgroup {
   color: black;
 }
 
-.HeroGroup {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 150px 50px;
-  text-align: center;
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
 
 @keyframes HeroAnimation {
   0% {
@@ -111,5 +116,8 @@ hgroup {
 
   .Hero p {
     font-size: 24px;
+  }
+  .Hero .Logos {
+    grid-auto-columns: repeat(3, 1fr); 
   }
 }
