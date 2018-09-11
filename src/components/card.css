@@ -1,0 +1,45 @@
+.card {
+    width: 300px;
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: .8s cubic-bezier(.2, .8, .2, 1);
+    cursor: pointer;
+}
+
+.card img {
+    position: absolute;
+    height: 110%;
+    top: 0;
+    z-index: -1;
+    transition: .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+.card:hover {
+    transform: scale(1.08, 1.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .5);
+}
+
+.card:hover img{
+    transform: translateY(-20px);
+}
+
+.card h3 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+    width:  190px;
+}
+
+.card p {
+    color: rgba(255, 255, 255, .8);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    align-self: end;
+    margin: 0 0 20px 20px;
+}
