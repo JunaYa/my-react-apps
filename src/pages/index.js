@@ -58,6 +58,7 @@ const IndexPage = () => (
           </div>
       </div>
       <Section
+        image={require('../images/wallpaper2.jpg')}
         logo={require('../images/logo-react.png')}
         title="React Design Code"
         text="A consistent color palette is an 
