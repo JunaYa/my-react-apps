@@ -3,6 +3,29 @@ import Link from 'gatsby-link';
 import Card from '../components/card';
 import Section from '../components/section';
 import Wave from '../components/wave';
+import Cell from '../components/cell';
+import styled from 'styled-components';
+import staticData from '../../staticData.json';
+
+const SectionCaption = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94A4BA;
+  text-align: center;
+`;
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 
 const IndexPage = () => (
   <div>
@@ -67,6 +90,12 @@ const IndexPage = () => (
          the colors that are used throughout 
          Design+Code's digital presence"
       />
+    <SectionCaption>12 sections - 6 hours</SectionCaption>
+    <SectionCellGroup>
+    {staticData.cells.map((cell, cellIndex) => (
+      <Cell title={cell.title} image={cell.image} key={cellIndex}/>
+    ))}
+    </SectionCellGroup>
   </div>
 )
 
